@@ -20,6 +20,13 @@ namespace ApplicationInsights.NetCore.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogTrace("Home => Index => LogLevel Trace");
+            _logger.LogDebug("Home => Index => LogLevel Debug");
+            _logger.LogInformation("Home => Index => LogLevel Information");                        
+            _logger.LogWarning("Home => Index => LogLevel Warning");
+            _logger.LogError("Home => Index => LogLevel Error");
+            _logger.LogCritical("Home => Index => LogLevel Critical");            
+
             return View();
         }
 
